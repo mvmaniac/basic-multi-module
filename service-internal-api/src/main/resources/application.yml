@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: 'server-internal-api'
+    name: 'service-internal-api'
 
   jpa:
     show-sql: true
