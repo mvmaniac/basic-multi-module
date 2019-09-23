@@ -1,0 +1,10 @@
+// plugins 관련 repositories 설정
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'basic-multi-module'
+
+include 'service-client', 'service-external-api', 'service-internal-api', 'service-internal-common'
