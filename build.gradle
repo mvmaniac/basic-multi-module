@@ -1,6 +1,6 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.0.RELEASE' // 하위 모듈 스프링 버전도 바뀜
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'org.springframework.boot' version '2.2.7.RELEASE' // 하위 모듈 스프링 버전도 바뀜
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
 
@@ -11,15 +11,16 @@ allprojects {
 
     group = 'io.devfactory'
     version = '0.0.1'
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_14
+    targetCompatibility = JavaVersion.VERSION_14
 
     repositories {
         mavenCentral()
+        jcenter()
     }
 
     ext {
-        set('springCloudVersion', 'Greenwich.SR3')
+        set('springCloudVersion', 'Hoxton.SR3')
     }
 
     configurations {
