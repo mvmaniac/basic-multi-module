@@ -11,7 +11,7 @@ public class MemberClientService {
     private final RestTemplate restTemplate;
 
     public String getMember(Long id) {
-        return restTemplate.getForObject("http://localhost:8082/external/member" + id, String.class);
+        return restTemplate.getForObject("http://localhost:8082/external/member/" + id, String.class);
     }
 
     public String getMembers() {
