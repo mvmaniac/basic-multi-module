@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.13.RELEASE' // 하위 모듈 스프링 버전도 바뀜
+    id 'org.springframework.boot' version '2.4.3' // 하위 모듈 스프링 버전도 바뀜
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
@@ -19,15 +19,7 @@ allprojects {
         jcenter()
     }
 
-    ext {
-        set('springCloudVersion', 'Hoxton.SR3')
-    }
-
     configurations {
-        developmentOnly
-        runtimeClasspath {
-            extendsFrom developmentOnly
-        }
         compileOnly {
             extendsFrom annotationProcessor
         }
@@ -56,14 +48,7 @@ subprojects {
     dependencies {
         // TODO: 더 좋은 방법?
         if (project.name != 'service-internal-common') {
-            implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
-            implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
-        }
-    }
-
-    dependencyManagement {
-        imports {
-            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+            // 공통 모듈를 제외하고 나머지 모듈에만 사용하는 라이브러리를 의존성 추가시...
         }
     }
 }
