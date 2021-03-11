@@ -13,8 +13,5 @@
     * service-external-api
     * service-internal-api
     * service-internal-common 만 service-internal-api 에 라이브러리 형태로 포함됨
-* 최대한 이해한 부분만 적용함
 
 ### 3. TODO
-
-* Spring Cloud 버전 변경에 따른 동작 확인 필요
