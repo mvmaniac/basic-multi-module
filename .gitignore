@@ -639,11 +639,17 @@ obj/
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-### Upload ###
+### Upload (by YHS) ###
 **/upload/**
 **/uploads/**
 
-### Keep ###
+### Keep (by YHS) ###
 !.keep
+
+### Private, Secret (by YHS) ###
+**/*-secret.yml
+**/*-private.yml
+**/*-secret.properties
+**/*-private.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,backup,git,svn,maven,gradle,androidstudio,eclipse,intellij+all,visualstudiocode,android,java,java-web,node,react,vuejs,angular
