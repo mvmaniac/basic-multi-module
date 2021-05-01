@@ -1,11 +1,11 @@
 plugins {
-    id 'java-library' // dependencies 에 api 를 사용하기 위해 설정
+  id 'java-library' // dependencies 에 api 를 사용하기 위해 설정
 }
 
 bootJar { enabled = false }
 jar { enabled = true }
 
 dependencies {
-    api 'org.springframework.boot:spring-boot-starter-data-jpa'
-    runtimeOnly 'com.h2database:h2'
+  api 'org.springframework.boot:spring-boot-starter-data-jpa'
+  runtimeOnly 'com.h2database:h2'
 }

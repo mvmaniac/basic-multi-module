@@ -9,18 +9,18 @@ import java.util.List;
 @Service
 public class MemberInternalService {
 
-    private final MemberRepository memberRepository;
+  private final MemberRepository memberRepository;
 
-    public Long signUp(Member member) {
-        return memberRepository.save(member).getId();
-    }
+  public Long signUp(Member member) {
+    return memberRepository.save(member).getId();
+  }
 
-    public Member getMember(Long id) {
-        return memberRepository.findById(id).orElse(Member.builder().build());
-    }
+  public Member getMember(Long id) {
+    return memberRepository.findById(id).orElse(Member.builder().build());
+  }
 
-    public List<Member> getMembers() {
-        return memberRepository.findAll();
-    }
+  public List<Member> getMembers() {
+    return memberRepository.findAll();
+  }
 
 }

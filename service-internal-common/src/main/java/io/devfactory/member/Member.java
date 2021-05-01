@@ -14,27 +14,27 @@ import java.util.StringJoiner;
 @Entity
 public class Member {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+  @Id
+  @GeneratedValue
+  private Long id;
 
-    private String name;
+  private String name;
 
-    private String email;
+  private String email;
 
-    @Builder
-    public Member(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
+  @Builder
+  public Member(String name, String email) {
+    this.name = name;
+    this.email = email;
+  }
 
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", Member.class.getSimpleName() + "[", "]")
-                .add("id=" + id)
-                .add("name='" + name + "'")
-                .add("email='" + email + "'")
-                .toString();
-    }
+  @Override
+  public String toString() {
+    return new StringJoiner(", ", Member.class.getSimpleName() + "[", "]")
+        .add("id=" + id)
+        .add("name='" + name + "'")
+        .add("email='" + email + "'")
+        .toString();
+  }
 
 }

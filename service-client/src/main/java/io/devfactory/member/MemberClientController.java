@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MemberClientController {
 
-    private final MemberClientService memberClientService;
+  private final MemberClientService memberClientService;
 
-    @GetMapping("/member/{id}")
-    public String getMember(@PathVariable Long id) {
-        return memberClientService.getMember(id);
-    }
+  @GetMapping("/member/{id}")
+  public String getMember(@PathVariable Long id) {
+    return memberClientService.getMember(id);
+  }
 
-    @GetMapping("/members")
-    public String getMembers() {
-        return memberClientService.getMembers();
-    }
+  @GetMapping("/members")
+  public String getMembers() {
+    return memberClientService.getMembers();
+  }
 
 }

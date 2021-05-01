@@ -13,15 +13,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class JpaDataRunner implements ApplicationRunner {
 
-    private final MemberRepository memberRepository;
+  private final MemberRepository memberRepository;
 
-    @Override
-    public void run(ApplicationArguments args) {
-        log.debug("JpaDataRunner run...");
+  @Override
+  public void run(ApplicationArguments args) {
+    log.debug("JpaDataRunner run...");
 
-        memberRepository.save(new Member("dev1", "dev1@gmail.com"));
-        memberRepository.save(new Member("dev2", "dev2@gmail.com"));
-        memberRepository.save(new Member("dev3", "dev3@gmail.com"));
-    }
+    memberRepository.save(new Member("dev1", "dev1@gmail.com"));
+    memberRepository.save(new Member("dev2", "dev2@gmail.com"));
+    memberRepository.save(new Member("dev3", "dev3@gmail.com"));
+  }
 
 }

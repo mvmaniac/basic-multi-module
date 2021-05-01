@@ -8,14 +8,14 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class MemberExternalService {
 
-    private final RestTemplate restTemplate;
+  private final RestTemplate restTemplate;
 
-    public String getMember(Long id) {
-        return restTemplate.getForObject("http://localhost:8083/internal/member/" + id, String.class);
-    }
+  public String getMember(Long id) {
+    return restTemplate.getForObject("http://localhost:8083/internal/member/" + id, String.class);
+  }
 
-    public String getMembers() {
-        return restTemplate.getForObject("http://localhost:8083/internal/members", String.class);
-    }
+  public String getMembers() {
+    return restTemplate.getForObject("http://localhost:8083/internal/members", String.class);
+  }
 
 }

@@ -11,16 +11,16 @@ import java.util.List;
 @RestController
 public class MemberInternalController {
 
-    private final MemberInternalService memberInternalService;
+  private final MemberInternalService memberInternalService;
 
-    @GetMapping("/internal/member/{id}")
-    public Member getMember(@PathVariable Long id) {
-        return memberInternalService.getMember(id);
-    }
+  @GetMapping("/internal/member/{id}")
+  public Member getMember(@PathVariable Long id) {
+    return memberInternalService.getMember(id);
+  }
 
-    @GetMapping("/internal/members")
-    public List<Member> getMembers() {
-        return memberInternalService.getMembers();
-    }
+  @GetMapping("/internal/members")
+  public List<Member> getMembers() {
+    return memberInternalService.getMembers();
+  }
 
 }
