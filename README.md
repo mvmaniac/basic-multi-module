@@ -7,7 +7,7 @@
 
 ### 2. 차이점
 
-* Spring Boot 2, Gradle 6 기반
+* Spring Boot 2, Gradle 7 기반
 * 아래 3개의 모듈은 별도의 어플리케이션으로 동작함
     * service-client
     * service-external-api
