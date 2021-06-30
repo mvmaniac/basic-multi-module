@@ -1,5 +1,5 @@
 plugins {
-  id 'org.springframework.boot' version '2.5.0' // 하위 모듈 스프링 버전도 바뀜
+  id 'org.springframework.boot' version '2.6.4' // 하위 모듈 스프링 버전도 바뀜
   id 'io.spring.dependency-management' version '1.0.11.RELEASE'
   id 'java'
 }
@@ -11,8 +11,8 @@ allprojects {
 
   group = 'io.devfactory'
   version = '0.0.1'
-  sourceCompatibility = JavaVersion.VERSION_16
-  targetCompatibility = JavaVersion.VERSION_16
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
 
   repositories {
     mavenCentral()
@@ -35,7 +35,7 @@ allprojects {
     testImplementation('org.springframework.boot:spring-boot-starter-test')
   }
 
-  test {
+  tasks.named('test') {
     useJUnitPlatform()
   }
 }
