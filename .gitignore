@@ -313,7 +313,6 @@ fabric.properties
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -429,10 +428,13 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
+### Append (by YHS) ###
 # dotenv environment variable files
-.env
+.env.dev.local
+.env.develop.local
 .env.development.local
 .env.test.local
+.env.prod.local
 .env.production.local
 .env.local
 
