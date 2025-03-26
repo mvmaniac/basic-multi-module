@@ -433,10 +433,14 @@ web_modules/
 .env.dev.local
 .env.develop.local
 .env.development.local
-.env.test.local
+.env.stg.local
+.env.stage.local
+.env.staging.local
 .env.prod.local
 .env.production.local
-.env.local
+.env.qa.local
+.env.test.local
+.env.local*
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -948,5 +952,20 @@ obj/
 
 ### Terraform Plan (by YHS) ###
 **/*.terraform.plan
+
+### Quasar (by YHS) ###
+# Quasar core related directories
+.quasar
+/quasar.config.*.temporary.compiled*
+
+# Cordova related directories and files
+/src-cordova/node_modules
+/src-cordova/platforms
+/src-cordova/plugins
+/src-cordova/www
+
+# Capacitor related directories and files
+/src-capacitor/www
+/src-capacitor/node_modules
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,svn,git,maven,gradle,eclipse,androidstudio,jetbrains+all,visualstudiocode,android,java,kotlin,node,yarn,react,vuejs,angular,python,go,rust,ansible,terraform,sonarqube
