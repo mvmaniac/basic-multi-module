@@ -1,0 +1,35 @@
+[versions]
+springBoot = "4.0.1"
+dependencyMmanagement = "1.1.7"
+java = "25"
+p6Spy = "2.0.0"
+
+[libraries]
+springBootDependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBoot" }
+springBootGradlePlugin = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBoot" }
+dependencyManagementPlugin = { module = "io.spring.gradle:dependency-management-plugin", version.ref = "dependencyMmanagement" }
+
+springBootStarterWebmvc = { module = "org.springframework.boot:spring-boot-starter-webmvc" }
+springBootStarterValidation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+springBootStarterDataJpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+
+p6SpySpringBootStarter = { module = "com.github.gavlyukovskiy:p6spy-spring-boot-starter", version.ref = "p6Spy" }
+
+h2 = { module = "com.h2database:h2" }
+
+springBootConfigurationProcessor = { module = "org.springframework.boot:spring-boot-configuration-processor" }
+springBootDevtools = { module = "org.springframework.boot:spring-boot-devtools" }
+
+lombok = { module = "org.projectlombok:lombok" }
+
+junitJupiter = { module = "org.junit.jupiter:junit-jupiter" }
+assertjCore = { module = "org.assertj:assertj-core" }
+
+springBootStarterWebmvcTest = { module = "org.springframework.boot:spring-boot-starter-webmvc-test" }
+springBootStarterValidationTest = { module = "org.springframework.boot:spring-boot-starter-validation-test" }
+springBootStarterDataJpaTest = { module = "org.springframework.boot:spring-boot-starter-data-jpa-test" }
+junitPlatformLauncher = { module = "org.junit.platform:junit-platform-launcher" }
+
+[plugins]
+springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
+springDpendencyMmanagement = { id = "io.spring.dependency-management", version.ref = "dependencyMmanagement" }

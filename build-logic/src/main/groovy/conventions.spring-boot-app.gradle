@@ -1,0 +1,26 @@
+// springboot 모듈인 경우
+plugins {
+  id 'conventions.java-common'
+  id 'org.springframework.boot'
+  id 'io.spring.dependency-management'
+}
+
+dependencies {
+  implementation libs.springBootStarterWebmvc.get()
+  implementation libs.springBootStarterValidation.get()
+
+  annotationProcessor libs.springBootConfigurationProcessor.get()
+  developmentOnly libs.springBootDevtools.get()
+
+  compileOnly libs.lombok.get()
+  annotationProcessor libs.lombok.get()
+  testCompileOnly libs.lombok.get()
+  testAnnotationProcessor libs.lombok.get()
+
+  testImplementation libs.springBootStarterWebmvcTest.get()
+  testRuntimeOnly libs.junitPlatformLauncher.get()
+}
+
+tasks.named('compileJava') {
+  inputs.files(tasks.named('processResources'))
+}

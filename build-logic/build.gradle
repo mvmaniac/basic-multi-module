@@ -1,0 +1,12 @@
+plugins {
+  id 'groovy-gradle-plugin'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation libs.springBootGradlePlugin
+  implementation libs.dependencyManagementPlugin
+}

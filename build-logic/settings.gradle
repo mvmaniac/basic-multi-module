@@ -1,0 +1,9 @@
+dependencyResolutionManagement {
+  versionCatalogs {
+    libs {
+      from files("${settingsDir.parent}/gradle/libs.versions.toml")
+    }
+  }
+}
+
+rootProject.name = 'build-logic'

@@ -1,0 +1,17 @@
+// springboot 기반의 java 라이브러리 모듈인 경우
+plugins {
+  id 'conventions.java-common'
+  id 'org.springframework.boot'
+  id 'io.spring.dependency-management'
+  id 'java-library'
+}
+
+bootJar { enabled = false }
+jar { enabled = true }
+
+dependencies {
+  compileOnly libs.lombok.get()
+  annotationProcessor libs.lombok.get()
+  testCompileOnly libs.lombok.get()
+  testAnnotationProcessor libs.lombok.get()
+}

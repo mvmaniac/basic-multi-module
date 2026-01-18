@@ -1,0 +1,14 @@
+// java 라이브러리 모듈인 경우
+plugins {
+  id 'conventions.java-common'
+  id 'java-library'
+}
+
+dependencies {
+  testImplementation platform(libs.springBootDependencies.get())
+
+  testImplementation libs.junitJupiter.get()
+  testImplementation libs.assertjCore.get()
+
+  testRuntimeOnly libs.junitPlatformLauncher.get()
+}

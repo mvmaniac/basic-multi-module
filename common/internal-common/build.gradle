@@ -1,0 +1,7 @@
+dependencies {
+  api libs.springBootStarterDataJpa
+
+  runtimeOnly libs.h2
+
+  testImplementation libs.springBootStarterDataJpaTest
+}

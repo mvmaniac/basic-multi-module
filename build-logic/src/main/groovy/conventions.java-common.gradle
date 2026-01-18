@@ -1,0 +1,23 @@
+plugins {
+  id 'java'
+}
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
+  }
+}
+
+configurations {
+  compileOnly {
+    extendsFrom annotationProcessor
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+test {
+  useJUnitPlatform()
+}

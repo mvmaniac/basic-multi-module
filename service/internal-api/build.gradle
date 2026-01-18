@@ -1,0 +1,5 @@
+dependencies {
+  implementation project(':common:internal-common')
+
+  implementation libs.p6SpySpringBootStarter
+}
