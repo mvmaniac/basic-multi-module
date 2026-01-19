@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class ServiceExternalApiApplication {
+public class ExternalApiServiceApplication {
 
   @Bean
   public RestTemplate restTemplate() {
@@ -14,7 +14,7 @@ public class ServiceExternalApiApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(ServiceExternalApiApplication.class, args);
+    SpringApplication.run(ExternalApiServiceApplication.class, args);
   }
 
 }

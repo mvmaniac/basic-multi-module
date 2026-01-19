@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SuppressWarnings("squid:S1186")
 @SpringBootTest
-class ServiceInternalCommonApplicationTest {
+class InternalApiServiceApplicationTests {
 
   @Test
   void contextLoads() {

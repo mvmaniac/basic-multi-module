@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServiceInternalCommonApplication {
+public class InternalApiServiceApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(ServiceInternalCommonApplication.class, args);
+    SpringApplication.run(InternalApiServiceApplication.class, args);
   }
 
 }

@@ -5,11 +5,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SuppressWarnings("squid:S1186")
 @SpringBootTest
-class ServiceExternalApiApplicationTest {
+class ClientServiceApplicationTests {
 
   @Test
   void contextLoads() {
   }
 
 }
-

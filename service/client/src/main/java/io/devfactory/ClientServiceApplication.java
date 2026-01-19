@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class ServiceClientApplication {
+public class ClientServiceApplication {
 
   @Bean
   public RestTemplate restTemplate() {
@@ -14,7 +14,7 @@ public class ServiceClientApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(ServiceClientApplication.class, args);
+    SpringApplication.run(ClientServiceApplication.class, args);
   }
 
 }
