@@ -6,19 +6,20 @@ plugins {
 }
 
 dependencies {
-  implementation libs.springBootStarterWebmvc.get()
-  implementation libs.springBootStarterValidation.get()
+  implementation libs.spring.boot.starter.webmvc.get()
+  implementation libs.spring.boot.starter.validation.get()
 
-  annotationProcessor libs.springBootConfigurationProcessor.get()
-  developmentOnly libs.springBootDevtools.get()
+  annotationProcessor libs.spring.boot.configuration.processor.get()
+  developmentOnly libs.spring.boot.devtools.get()
 
   compileOnly libs.lombok.get()
   annotationProcessor libs.lombok.get()
   testCompileOnly libs.lombok.get()
   testAnnotationProcessor libs.lombok.get()
 
-  testImplementation libs.springBootStarterWebmvcTest.get()
-  testRuntimeOnly libs.junitPlatformLauncher.get()
+  testImplementation libs.spring.boot.starter.test.webmvc.get()
+  testImplementation libs.spring.boot.starter.test.validation.get()
+  testRuntimeOnly libs.junit.platform.launcher.get()
 }
 
 tasks.named('compileJava') {

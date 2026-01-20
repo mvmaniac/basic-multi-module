@@ -5,10 +5,19 @@ plugins {
 }
 
 dependencies {
-  testImplementation platform(libs.springBootDependencies.get())
+  implementation platform(libs.spring.boot.dependencies.get())
+  annotationProcessor platform(libs.spring.boot.dependencies.get())
+  testAnnotationProcessor platform(libs.spring.boot.dependencies.get())
 
-  testImplementation libs.junitJupiter.get()
-  testImplementation libs.assertjCore.get()
+  implementation libs.logback.classic.get()
 
-  testRuntimeOnly libs.junitPlatformLauncher.get()
+  compileOnly libs.lombok.get()
+  annotationProcessor libs.lombok.get()
+  testCompileOnly libs.lombok.get()
+  testAnnotationProcessor libs.lombok.get()
+
+  testImplementation libs.junit.jupiter.get()
+  testImplementation libs.assertj.core.get()
+
+  testRuntimeOnly libs.junit.platform.launcher.get()
 }

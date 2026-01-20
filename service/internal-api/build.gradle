@@ -1,5 +1,5 @@
 dependencies {
   implementation project(':common:internal-common')
 
-  implementation libs.p6SpySpringBootStarter
+  implementation libs.p6spy.spring.boot.starter
 }

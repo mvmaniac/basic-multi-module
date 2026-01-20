@@ -7,6 +7,6 @@ repositories {
 }
 
 dependencies {
-  implementation libs.springBootGradlePlugin
-  implementation libs.dependencyManagementPlugin
+  implementation libs.spring.boot.gradle.plugin
+  implementation libs.dependency.management.plugin
 }
