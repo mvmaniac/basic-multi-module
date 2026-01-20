@@ -7,4 +7,10 @@ pluginManagement {
 
 rootProject.name = 'basic-multi-module'
 
-include 'service-client', 'service-external-api', 'service-internal-api', 'service-internal-common'
+includeBuild 'build-logic'
+
+include ':common:internal-common'
+
+include ':service:client'
+include ':service:external-api'
+include ':service:internal-api'

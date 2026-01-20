@@ -1,35 +1,36 @@
 [versions]
-springBoot = "4.0.1"
-dependencyMmanagement = "1.1.7"
+spring-boot = "4.0.1"
+dependency-management = "1.1.7"
 java = "25"
-p6Spy = "2.0.0"
+p6spy = "2.0.0"
 
 [libraries]
-springBootDependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBoot" }
-springBootGradlePlugin = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBoot" }
-dependencyManagementPlugin = { module = "io.spring.gradle:dependency-management-plugin", version.ref = "dependencyMmanagement" }
+spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
+spring-boot-gradle-plugin = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "spring-boot" }
+dependency-management-plugin = { module = "io.spring.gradle:dependency-management-plugin", version.ref = "dependency-management" }
 
-springBootStarterWebmvc = { module = "org.springframework.boot:spring-boot-starter-webmvc" }
-springBootStarterValidation = { module = "org.springframework.boot:spring-boot-starter-validation" }
-springBootStarterDataJpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+spring-boot-starter-webmvc = { module = "org.springframework.boot:spring-boot-starter-webmvc" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
 
-p6SpySpringBootStarter = { module = "com.github.gavlyukovskiy:p6spy-spring-boot-starter", version.ref = "p6Spy" }
+p6spy-spring-boot-starter = { module = "com.github.gavlyukovskiy:p6spy-spring-boot-starter", version.ref = "p6spy" }
 
 h2 = { module = "com.h2database:h2" }
 
-springBootConfigurationProcessor = { module = "org.springframework.boot:spring-boot-configuration-processor" }
-springBootDevtools = { module = "org.springframework.boot:spring-boot-devtools" }
+logback-classic = { module = "ch.qos.logback:logback-classic" }
+
+spring-boot-configuration-processor = { module = "org.springframework.boot:spring-boot-configuration-processor" }
+spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools" }
 
 lombok = { module = "org.projectlombok:lombok" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+assertj-core = { module = "org.assertj:assertj-core" }
 
-junitJupiter = { module = "org.junit.jupiter:junit-jupiter" }
-assertjCore = { module = "org.assertj:assertj-core" }
-
-springBootStarterWebmvcTest = { module = "org.springframework.boot:spring-boot-starter-webmvc-test" }
-springBootStarterValidationTest = { module = "org.springframework.boot:spring-boot-starter-validation-test" }
-springBootStarterDataJpaTest = { module = "org.springframework.boot:spring-boot-starter-data-jpa-test" }
-junitPlatformLauncher = { module = "org.junit.platform:junit-platform-launcher" }
+spring-boot-starter-test-webmvc = { module = "org.springframework.boot:spring-boot-starter-webmvc-test" }
+spring-boot-starter-test-validation = { module = "org.springframework.boot:spring-boot-starter-validation-test" }
+spring-boot-starter-test-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa-test" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
 
 [plugins]
-springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
-springDpendencyMmanagement = { id = "io.spring.dependency-management", version.ref = "dependencyMmanagement" }
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "dependency-management" }

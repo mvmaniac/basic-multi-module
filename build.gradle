@@ -1,65 +1,16 @@
 plugins {
-  id 'org.springframework.boot' version '3.4.4' // 하위 모듈 스프링 버전도 바뀜
-  id 'io.spring.dependency-management' version '1.1.7'
-  id 'java'
+  // plugin만 미리 로드만 하고 적용은 subprojects에서
+  id 'conventions.spring-boot-app' apply false
+  id 'conventions.spring-boot-java' apply false
 }
 
-allprojects {
-  apply plugin: 'org.springframework.boot'
-  apply plugin: 'io.spring.dependency-management'
-  apply plugin: 'java'
-
-  group = 'io.devfactory'
-  version = '0.0.1'
-
-  java {
-    toolchain {
-      languageVersion = JavaLanguageVersion.of(21)
-    }
-  }
-
-  repositories {
-    mavenCentral()
-  }
-
-  configurations {
-    compileOnly {
-      extendsFrom annotationProcessor
-    }
-  }
-
-  dependencies {
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-  }
-
-  tasks.named('test') {
-    useJUnitPlatform()
-  }
-
-  tasks.named('compileJava') {
-    inputs.files(tasks.named('processResources'))
-  }
-}
+group = 'io.devfactory'
+version = '0.0.1'
 
 subprojects {
-  dependencies {
-    // TODO: 더 좋은 방법?
-    if (project.name != 'service-internal-common') {
-      // 공통 모듈를 제외하고 나머지 모듈에만 사용하는 라이브러리를 의존성 추가시...
-    }
-  }
-}
-
-project(':service-internal-api') {
-  dependencies {
-    implementation project(':service-internal-common')
+  if (path.startsWith(':common:')) {
+    apply plugin: 'conventions.spring-boot-java'
+  } else if (path.startsWith(':service:')) {
+    apply plugin: 'conventions.spring-boot-app'
   }
 }
